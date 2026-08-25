@@ -1,0 +1,9 @@
+# Visual Studio local state — machine-specific, never shared.
+.vs/
+
+# Python bytecode from sync-stubs.py.
+__pycache__/
+*.pyc
+
+# Subagent-driven-development scratch: ledgers, briefs, review packages.
+.superpowers/

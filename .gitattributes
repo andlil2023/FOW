@@ -1,0 +1,11 @@
+# FOW is markdown plus one Python script. Keep line endings LF everywhere - in the
+# repository and in working trees on every platform - so stub comparison, diffs and
+# `sync-stubs.py --check` behave identically on Windows, Linux and macOS.
+#
+# Not part of the install payload: copying this into a product repo would renormalize
+# that repo's files too. Product repos manage their own line endings.
+
+* text=auto eol=lf
+
+*.md  text eol=lf
+*.py  text eol=lf
