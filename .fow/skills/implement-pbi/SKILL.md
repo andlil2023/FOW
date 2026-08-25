@@ -12,6 +12,10 @@ Input: PBI id — ask if not given. Require PBI approved; if draft, say so and s
 4. All tasks done + all AC covered by green tests: update feature test.md (row per REQ: verify type, test name, status). Create from .fow/templates/test.md if missing.
 5. If this PBI added any dependency: append a row per package to docs/soup/index.md (package, version, tier TBD, status none, Added by PBI-xxx). Row only — no assessment, no gate. Mention that /update-soup handles the assessment.
 6. Show summary + test run output as evidence. Ask: done / more work.
-7. On human OK: PBI status done. Suggest: /next.
+7. On human OK: PBI status done.
+   Last PBI of the feature: propose FS-xxx status done. On approval, tick the ITR Scope row to [x] if every id in that row is now done.
+   Ticking is skill-written bookkeeping — never hand-edited, never ticked while any id in the row is unfinished.
+   Every non-dropped row of the ITR now [x]: propose ITR status done. Human approves — never automatic.
+   Suggest: /next.
 
-Never: skip the failing-test step, mark done with red tests, silently deviate from architecture, advance status without explicit approval.
+Never: skip the failing-test step, mark done with red tests, silently deviate from architecture, advance status without explicit approval, tick a Scope row whose ids are not all done.
