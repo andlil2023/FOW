@@ -1,6 +1,6 @@
 ---
 name: implement-pbi
-description: Stage 8 — implement an approved PBI task by task with TDD, update task checkboxes and the feature test.md. Use when the user says to implement a PBI, e.g. "implement PBI-004".
+description: Stage 9 — implement an approved PBI task by task with TDD, update task checkboxes and the feature test.md. Use when the user says to implement a PBI, e.g. "implement PBI-004".
 ---
 
 Read FOW.md, the PBI, its tasks file, feature.md, and docs/architecture.md first.
