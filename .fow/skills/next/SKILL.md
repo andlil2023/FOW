@@ -16,7 +16,7 @@ Report, compact:
 5. Recommend ONE next action as a skill command. Reason in 1 line. Order:
    a. Any PBI in-progress — resume it first. Always wins. An in-progress ITR is a container, not resumable work.
    b. Drafts awaiting approval.
-   c. Stages 1-3 incomplete: the missing one — /define-architecture, else /scaffold-solution.
+   c. Stages 1-3 incomplete: the missing one — /define-product, else /define-architecture, else /scaffold-solution.
    d. No ITR approved or in-progress: `/define-iteration`.
    e. Active ITR, any non-dropped item short of an approved FS: definition-first. Earliest such item, next missing step —
       `/new-user-need ITR-xxx/In`, then `/derive-requirements UN-xxx`, then `/new-feature REQ-xxx`.
@@ -25,5 +25,4 @@ Report, compact:
       `/plan-pbi FS-xxx`, then `/implement-pbi PBI-xxx`.
    Recommendation only. Never a block — the human overrides at will.
 
-Missing docs/prd.md = fresh repo: recommend /define-product.
 Never: modify any file.
