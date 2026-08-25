@@ -16,7 +16,7 @@ Each skill is a plain markdown procedure — no tool-specific features. Any agen
 
 | Stage | Trigger | Does | File to read |
 |---|---|---|---|
-| 1 | `/define-product` | interview the user to create a minimal PRD (docs/prd.md) | `.fow/skills/define-product/SKILL.md` |
+| 1 | `/define-product` | interview the user to create a minimal PRD (docs/prd.md) and seed the candidate backlog (docs/backlog.md) | `.fow/skills/define-product/SKILL.md` |
 | 2 | `/define-architecture` | interview the user on tools, language, storage, tests, deployment; create docs/architecture.md plus ADRs | `.fow/skills/define-architecture/SKILL.md` |
 | 3 | `/scaffold-solution` | create the empty solution skeleton from the approved architecture | `.fow/skills/scaffold-solution/SKILL.md` |
 | 4 | `/define-iteration` | define the scope of one iteration — a short list of user needs and features, no interviewing | `.fow/skills/define-iteration/SKILL.md` |
@@ -26,7 +26,7 @@ Each skill is a plain markdown procedure — no tool-specific features. Any agen
 | 8 | `/plan-pbi` | split an approved feature into PBIs with acceptance criteria and one-line tasks | `.fow/skills/plan-pbi/SKILL.md` |
 | 9 | `/implement-pbi` | implement an approved PBI task by task with TDD, update task checkboxes and the feature test.md | `.fow/skills/implement-pbi/SKILL.md` |
 | - | `/next` | Show workflow state and the single next action | `.fow/skills/next/SKILL.md` |
-| - | `/trace` | Show the traceability chain for an ID (UN/REQ/FS/PBI/ADR) or find orphans | `.fow/skills/trace/SKILL.md` |
+| - | `/trace` | Show the traceability chain for an ID (ITR/UN/REQ/FS/PBI/ADR/SOUP) or find orphans | `.fow/skills/trace/SKILL.md` |
 | - | `/grilling` | Grill the user relentlessly about a plan, decision, or idea until shared understanding | `.fow/skills/grilling/SKILL.md` |
 | - | `/update-soup` | Reconcile SOUP assessments against the dependencies actually used in code | `.fow/skills/update-soup/SKILL.md` |
 

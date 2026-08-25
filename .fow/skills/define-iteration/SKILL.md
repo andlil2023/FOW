@@ -17,5 +17,5 @@ Read FOW.md and .fow/templates/iteration.md first.
 7. Show draft. Ask: approve / refine / stop.
 8. On approve: status approved, update `updated:`, mark each picked backlog item `ITR-xxx`. Suggest next: /next.
 
-Amend mode (ITR already approved): append Scope rows with fresh item numbers, add a delta log line. Never renumber, never regenerate.
+Amend mode (ITR already approved): append Scope rows with fresh item numbers, add a delta log line. Never renumber, never regenerate. Dropping an item: mark its row [-], add a delta log line, and set its backlog line back to `dropped`.
 Never: interview the items, exceed cap, advance status without explicit approval.

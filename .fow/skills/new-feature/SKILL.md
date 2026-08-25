@@ -13,7 +13,8 @@ May also carry an iteration item (`/new-feature ITR-002/I3`): take the item's in
 3. DELTA: propose amended sections + one dated delta log line. Never regenerate the file. Add new REQ ids to traces.
 4. Show draft/delta. Ask: approve / refine / stop.
 5. On approve: apply (status approved for new; delta log line written for existing).
-   From an iteration item: write the FS id into that ITR Scope row's id field — the existing FS-xxx for a delta, the new one for a new feature.
+   From an iteration item: REPLACE that ITR Scope row's id field with the FS id — the existing FS-xxx for a delta, the new one for a new feature.
+   Row names the terminal artifact, never the trail: a UN id put there during definition is superseded, not appended. One item yielding several features: comma-separate.
    ITR still `approved`: propose advancing it to in-progress. Human approves — never automatic.
    Suggest next: /plan-pbi FS-xxx.
 

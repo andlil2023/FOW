@@ -72,7 +72,7 @@ EARS patterns: The system shall X. / When T, the system shall X. / While S, the 
 - [ ] I1 login required before any access -> UN-004
 ```
 Mark: [ ] open · [x] complete, every id done · [-] dropped, reason in the delta log.
-Id field: `-` until an artifact is minted, then UN-xxx or FS-xxx, comma-separated if several.
+Id field: `-` until an artifact is minted, then the UN during definition, replaced by the FS once the feature exists. Names the terminal artifact, never the trail. Comma-separated only when one item yields several features.
 Skill-written index, never hand-edited. Truth is the `iteration:` field on the artifact; /next flags mismatch.
 
 ## Diagrams

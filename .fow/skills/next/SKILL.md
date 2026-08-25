@@ -17,9 +17,10 @@ Report, compact:
    a. Any PBI in-progress — resume it first. Always wins. An in-progress ITR is a container, not resumable work.
    b. Drafts awaiting approval.
    c. Stages 1-3 incomplete: the missing one — /define-product, else /define-architecture, else /scaffold-solution.
+      Stages 1-2 read their artifact status. Stage 3 has no artifact: check disk for the solution/project files architecture.md names.
    d. No ITR approved or in-progress: `/define-iteration`.
    e. Active ITR, any non-dropped item short of an approved FS: definition-first. Earliest such item, next missing step —
-      `/new-user-need ITR-xxx/In`, then `/derive-requirements UN-xxx`, then `/new-feature REQ-xxx`.
+      `/new-user-need ITR-xxx/In`, then `/derive-requirements UN-xxx`, then `/new-feature REQ-xxx ITR-xxx/In`.
    f. Every non-dropped row [x]: iteration complete. Recommend ITR status done (human approves), then `/define-iteration`.
    g. Otherwise — every non-dropped item has an approved FS, work outstanding: implementation, one feature at a time —
       `/plan-pbi FS-xxx`, then `/implement-pbi PBI-xxx`.

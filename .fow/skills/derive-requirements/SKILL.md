@@ -10,7 +10,7 @@ Input: UN id — ask if not given. Require UN approved; if draft, say so and sto
 2. Draft REQs: one heading block per REQ, heading `### REQ-xxx [UN-yyy] draft`, ONE EARS sentence each (patterns listed at top of requirements.md). No prose.
 3. Show drafts. Walk through REQ by REQ: approve / reword / drop.
 4. Approved ones: set heading status approved. Append all kept blocks to requirements.md, update `updated:`.
-5. Suggest next: /new-feature with the approved REQ ids.
+5. Suggest next: /new-feature with the approved REQ ids. UN carries `iteration:`: pass its ITR-xxx/In too, else the feature is never linked to the iteration.
 
 Each REQ must be testable — a reader can say pass/fail. Vague words (fast, easy, robust) = reword with numbers.
 Never: multi-sentence REQs, advance status without explicit approval.
