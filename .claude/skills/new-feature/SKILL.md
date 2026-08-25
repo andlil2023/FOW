@@ -1,6 +1,6 @@
 ---
 name: new-feature
-description: Stage 7 — turn approved requirements into a feature spec (new feature folder or delta to an existing feature). Use when requirements are approved, e.g. "create feature from REQ-003 REQ-004".
+description: Stage 7 — turn approved requirements into a feature spec (new feature folder or delta to an existing feature), optionally from an iteration item (ITR-xxx/In). Use when requirements are approved, e.g. "create feature from REQ-003 REQ-004".
 ---
 
 Pointer only. Canonical skill: `.fow/skills/new-feature/SKILL.md`

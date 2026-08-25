@@ -1,6 +1,6 @@
 ---
 name: new-user-need
-description: Stage 5 — interview the user to capture one user need as docs/needs/UN-xxx.md. Use when the user wants to define a new user need or revise an existing one.
+description: Stage 5 — interview the user to capture one user need as docs/needs/UN-xxx.md, optionally from an iteration item (ITR-xxx/In). Use when the user wants to define a new user need or revise an existing one.
 ---
 
 Pointer only. Canonical skill: `.fow/skills/new-user-need/SKILL.md`
