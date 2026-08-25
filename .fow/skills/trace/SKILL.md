@@ -12,7 +12,8 @@ ITR walks down only — an iteration schedules, it does not parent. `/trace ITR-
 Example: `ITR-002 in-progress -> I1 UN-004 approved <- REQ-007 approved <- FS-003 draft`
 An artifact's own chain is unaffected by its iteration: `/trace UN-004` walks to PRD as always, and notes `scheduled in ITR-002/I1` as a footnote, never as a parent.
 
-With "orphans" (or no ID): list — approved UN with no REQ, approved REQ with no FS, approved REQ with no test row, approved FS with no PBI, any item tracing to a superseded parent, ITR Scope rows whose id field disagrees with the artifacts' `iteration:` fields in either direction.
+With "orphans" (or no ID): list — approved UN with no REQ, approved REQ with no FS, approved REQ with no test row, approved FS with no PBI, any item tracing to a superseded parent, ITR Scope rows naming an id whose artifact does not declare that `iteration:` item, artifacts declaring an `iteration:` item no ITR row defines, and rows still naming a UN whose feature already exists.
+A UN declaring an `iteration:` item whose row now names the FS is correct, not an orphan — the row holds the terminal artifact, the UN keeps the link.
 
 Package reconciliation is NOT this skill's job — /update-soup diffs code against docs. /trace walks declared links only.
 
