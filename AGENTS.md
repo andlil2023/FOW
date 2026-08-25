@@ -18,17 +18,18 @@ Each skill is a plain markdown procedure — no tool-specific features. Any agen
 | 1 | `/define-product` | interview the user to create a minimal PRD (docs/prd.md) | `.fow/skills/define-product/SKILL.md` |
 | 2 | `/define-architecture` | interview the user on tools, language, storage, tests, deployment; create docs/architecture.md plus ADRs | `.fow/skills/define-architecture/SKILL.md` |
 | 3 | `/scaffold-solution` | create the empty solution skeleton from the approved architecture | `.fow/skills/scaffold-solution/SKILL.md` |
-| 4 | `/new-user-need` | interview the user to capture one user need as docs/needs/UN-xxx.md | `.fow/skills/new-user-need/SKILL.md` |
-| 5 | `/derive-requirements` | derive EARS requirements from an approved user need into docs/requirements.md | `.fow/skills/derive-requirements/SKILL.md` |
-| 6 | `/new-feature` | turn approved requirements into a feature spec (new feature folder or delta to an existing feature) | `.fow/skills/new-feature/SKILL.md` |
-| 7 | `/plan-pbi` | split an approved feature into PBIs with acceptance criteria and one-line tasks | `.fow/skills/plan-pbi/SKILL.md` |
-| 8 | `/implement-pbi` | implement an approved PBI task by task with TDD, update task checkboxes and the feature test.md | `.fow/skills/implement-pbi/SKILL.md` |
+| 4 | `/define-iteration` | define the scope of one iteration — a short list of user needs and features, no interviewing | `.fow/skills/define-iteration/SKILL.md` |
+| 5 | `/new-user-need` | interview the user to capture one user need as docs/needs/UN-xxx.md | `.fow/skills/new-user-need/SKILL.md` |
+| 6 | `/derive-requirements` | derive EARS requirements from an approved user need into docs/requirements.md | `.fow/skills/derive-requirements/SKILL.md` |
+| 7 | `/new-feature` | turn approved requirements into a feature spec (new feature folder or delta to an existing feature) | `.fow/skills/new-feature/SKILL.md` |
+| 8 | `/plan-pbi` | split an approved feature into PBIs with acceptance criteria and one-line tasks | `.fow/skills/plan-pbi/SKILL.md` |
+| 9 | `/implement-pbi` | implement an approved PBI task by task with TDD, update task checkboxes and the feature test.md | `.fow/skills/implement-pbi/SKILL.md` |
 | - | `/next` | Show workflow state and the single next action | `.fow/skills/next/SKILL.md` |
 | - | `/trace` | Show the traceability chain for an ID (UN/REQ/FS/PBI/ADR) or find orphans | `.fow/skills/trace/SKILL.md` |
 | - | `/grilling` | Grill the user relentlessly about a plan, decision, or idea until shared understanding | `.fow/skills/grilling/SKILL.md` |
 | - | `/update-soup` | Reconcile SOUP assessments against the dependencies actually used in code | `.fow/skills/update-soup/SKILL.md` |
 
-Flow: stages 1-3 once, stages 4-8 repeat per increment. `/next`, `/trace`, `/grilling`, `/update-soup` anytime.
+Flow: stages 1-3 once, stage 4 per iteration, stages 5-9 per item in it — define every item first, then implement one feature at a time. `/next`, `/trace`, `/grilling`, `/update-soup` anytime.
 
 ## How to run a skill
 User names a trigger (`/new-user-need`, or plain language matching the "Does" column):
