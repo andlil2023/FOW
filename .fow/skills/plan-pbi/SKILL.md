@@ -1,6 +1,6 @@
 ---
 name: plan-pbi
-description: Stage 7 — split an approved feature into PBIs with acceptance criteria and one-line tasks. Use when a feature spec is approved, e.g. "plan PBIs for FS-002".
+description: Stage 8 — split an approved feature into PBIs with acceptance criteria and one-line tasks. Use when a feature spec is approved, e.g. "plan PBIs for FS-002".
 ---
 
 Read FOW.md, the feature.md, .fow/templates/pbi.md, .fow/templates/tasks.md first.

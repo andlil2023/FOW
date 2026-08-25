@@ -2,7 +2,9 @@
 
 Iterative, human-led development workflow for new products. Feature oriented: each increment runs need -> requirements -> feature -> PBI -> code. Compact docs with hard size caps, full ID traceability, AI-assisted via skills.
 
-**No big upfront spec — but the spec does get big.** `docs/prd.md` starts as a 40-line statement of problem, users and goals, and stays that size. Everything else grows around it, one user need at a time: each need adds requirements, a feature spec, PBIs and test rows. Over a product's life that body of documentation becomes large and detailed. It just never gets written all at once, and never ahead of a real need.
+**No big upfront spec — but the spec does get big.** `docs/prd.md` starts as a short statement of problem, users and goals. It carries no line cap and grows as the product does — but never with features, which live in feature specs, and never with detail that belongs in a need or a requirement. Everything else grows around it, one user need at a time: each need adds requirements, a feature spec, PBIs and test rows. Over a product's life that body of documentation becomes large and detailed. It just never gets written all at once, and never ahead of a real need.
+
+**Iterations bound the scope.** `/define-iteration` is a short list, not an interview: name the needs and features you want this round, nothing more. FOW then defines every item in that list before writing any code, and implements one feature at a time.
 
 ## Flow
 
@@ -10,20 +12,30 @@ Iterative, human-led development workflow for new products. Feature oriented: ea
 flowchart TD
     subgraph once["Once — foundation"]
         direction TB
-        P["/define-product<br/>docs/prd.md"]
+        P["/define-product<br/>docs/prd.md + docs/backlog.md"]
         A["/define-architecture<br/>docs/architecture.md + adr/"]
         S["/scaffold-solution<br/>empty solution, builds"]
         P --> A --> S
     end
 
-    subgraph inc["Per increment — repeats forever"]
+    subgraph iter["Per iteration — the scope boundary"]
+        direction TB
+        IT["/define-iteration<br/>docs/iterations/ITR-xxx.md"]
+    end
+
+    subgraph def["Per item — define them all first"]
         direction TB
         U["/new-user-need<br/>docs/needs/UN-xxx.md"]
         R["/derive-requirements<br/>REQ blocks in docs/requirements.md"]
         F["/new-feature<br/>docs/features/FS-xxx-slug/feature.md"]
+        U --> R --> F
+    end
+
+    subgraph imp["Then implement — one feature at a time"]
+        direction TB
         B["/plan-pbi<br/>PBI-xxx.md + PBI-xxx-tasks.md"]
         I["/implement-pbi<br/>code via TDD + test.md rows"]
-        U --> R --> F --> B --> I
+        B --> I
     end
 
     subgraph any["Anytime"]
@@ -34,11 +46,15 @@ flowchart TD
         UP["/update-soup<br/>reconcile dependencies"]
     end
 
-    S --> U
-    I -.->|"next need"| U
+    S --> IT
+    IT --> U
+    F -.->|"next item"| U
+    F ==>|"all items defined"| B
+    I -.->|"next feature"| B
+    I -.->|"iteration done"| IT
 ```
 
-Text form: `/define-product -> /define-architecture -> /scaffold-solution`, then loop `/new-user-need -> /derive-requirements -> /new-feature -> /plan-pbi -> /implement-pbi`.
+Text form: `/define-product -> /define-architecture -> /scaffold-solution` once. Then per iteration: `/define-iteration`, then `/new-user-need -> /derive-requirements -> /new-feature` for every item in it, then `/plan-pbi -> /implement-pbi` one feature at a time.
 
 Every skill drafts one artifact, stops, and asks: **approve / refine / stop**. You approve; nothing advances without your OK. No status changes itself. Resume any session with `/next`.
 
@@ -81,10 +97,10 @@ Works with any AI agent. Claude Code picks up the skills natively; every other a
 ## Contents
 - FOW.md — canonical rules: stages, gates, IDs, statuses, style
 - AGENTS.md — router: tells any agent which skill file to read for which trigger
-- docs/ — every artifact FOW produces, for humans to read and approve: prd.md, architecture.md, adr/, needs/, requirements.md, features/FS-xxx-slug/, soup/
+- docs/ — every artifact FOW produces, in the *product* repo, for humans to read and approve: prd.md, backlog.md, architecture.md, adr/, iterations/, needs/, requirements.md, features/FS-xxx-slug/, soup/. This repo has no docs/ — the skills create it there.
 - .fow/ — workflow internals. Not intended to be read or edited by hand
-  - .fow/skills/ — 12 canonical skills: one per stage + next + trace + grilling + update-soup. Edit here
-  - .fow/templates/ — 12 templates (prd, architecture, adr, user-need, requirements, feature, pbi, tasks, test, soup-full, soup-short, soup-index)
+  - .fow/skills/ — 13 canonical skills: one per stage + next + trace + grilling + update-soup. Edit here
+  - .fow/templates/ — 14 templates (prd, backlog, architecture, adr, iteration, user-need, requirements, feature, pbi, tasks, test, soup-full, soup-short, soup-index)
   - .fow/bin/sync-stubs.py — regenerates the Claude Code stubs from the canonical skills
 - .claude/skills/ — generated pointer stubs so Claude Code auto-discovers the skills. Do not edit
 
