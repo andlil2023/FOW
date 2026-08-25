@@ -5,7 +5,7 @@ Entry point for any AI agent working in this repo. Read `FOW.md` for the full ru
 ## Laws (canonical text in FOW.md)
 1. Human is master. Agent drafts, human approves. No status change without explicit human OK.
 2. One artifact per step. Write it, stop, ask: approve / refine / stop.
-3. Telegraph style. Extreme concision. Information over grammar. Fragments fine. No filler, no repetition. Minimum tokens without losing technical meaning. Hard line cap per template. Cap hit = split, never grow. Carve-out: externally-mandated regulatory documents keep the cap their standard requires.
+3. Telegraph style. Extreme concision. Information over grammar. Fragments fine. No filler, no repetition. Minimum tokens without losing technical meaning. Hard line cap per template. Cap hit = split, never grow. Carve-outs: externally-mandated regulatory documents keep the cap their standard requires; `prd.md` has no cap and grows with the product, still telegraph style and still no feature list.
    Diagrams: Mermaid for UML-shaped (class, sequence, state, ER, flow); ASCII for folder trees.
 4. Delta principle. After approval: amend, never regenerate. Architecture change = new ADR. Feature change = delta log line.
 5. Two directories, one rule each. `docs/` = every artifact, human-readable, human-approved. `.fow/` = workflow internals, never hand-edited.

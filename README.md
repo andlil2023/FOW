@@ -2,7 +2,7 @@
 
 Iterative, human-led development workflow for new products. Feature oriented: each increment runs need -> requirements -> feature -> PBI -> code. Compact docs with hard size caps, full ID traceability, AI-assisted via skills.
 
-**No big upfront spec — but the spec does get big.** `docs/prd.md` starts as a short statement of problem, users and goals, and stays that size. Everything else grows around it, one user need at a time: each need adds requirements, a feature spec, PBIs and test rows. Over a product's life that body of documentation becomes large and detailed. It just never gets written all at once, and never ahead of a real need.
+**No big upfront spec — but the spec does get big.** `docs/prd.md` starts as a short statement of problem, users and goals. It carries no line cap and grows as the product does — but never with features, which live in feature specs, and never with detail that belongs in a need or a requirement. Everything else grows around it, one user need at a time: each need adds requirements, a feature spec, PBIs and test rows. Over a product's life that body of documentation becomes large and detailed. It just never gets written all at once, and never ahead of a real need.
 
 **Iterations bound the scope.** `/define-iteration` is a short list, not an interview: name the needs and features you want this round, nothing more. FOW then defines every item in that list before writing any code, and implements one feature at a time.
 

@@ -1,4 +1,4 @@
-<!-- TEMPLATE prd. Cap: 45 lines. Telegraph style. NO feature list. File: docs/prd.md -->
+<!-- TEMPLATE prd. No cap — see FOW.md Law 3 carve-out. Telegraph style. NO feature list. File: docs/prd.md -->
 ---
 id: PRD
 title: <product name>

@@ -7,6 +7,7 @@ Human-led iterative dev workflow for new products. Feature oriented: every incre
 2. One artifact per step. Skill writes it, stops, asks: approve / refine / stop.
 3. Telegraph style. Extreme concision. Information over grammar. Fragments fine. No filler, no repetition. Minimum tokens without losing technical meaning. Hard line cap per template. Cap hit = split, never grow.
    Carve-out: externally-mandated documents (regulatory assessments) carry the cap their standard requires and are exempt from split-never-grow. They cannot be split without breaking the structure an auditor expects.
+   Carve-out: prd.md has no cap. It is the one place the whole product is described, and it grows as the product does. Telegraph style still binds it, and the no-feature-list rule still holds — length must come from the product, never from detail that belongs in a need, a requirement or a feature.
 4. Delta principle. After approval: amend, never regenerate. Architecture change = new ADR. Feature change = delta log line.
 5. Two directories, one rule each. docs/ = every artifact, human-readable, human-approved. .fow/ = workflow internals (skills, templates), never hand-edited.
    docs/ exists only in the product repo. The FOW kit repo has none — the skills create it as output. Never write a design note, spec or plan into docs/ here.
