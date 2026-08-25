@@ -9,6 +9,7 @@ Entry point for any AI agent working in this repo. Read `FOW.md` for the full ru
    Diagrams: Mermaid for UML-shaped (class, sequence, state, ER, flow); ASCII for folder trees.
 4. Delta principle. After approval: amend, never regenerate. Architecture change = new ADR. Feature change = delta log line.
 5. Two directories, one rule each. `docs/` = every artifact, human-readable, human-approved. `.fow/` = workflow internals, never hand-edited.
+   `docs/` exists only in the product repo. The FOW kit repo has none — the skills create it as output.
 
 ## Skills
 Each skill is a plain markdown procedure — no tool-specific features. Any agent can run one.
@@ -44,13 +45,14 @@ Never improvise the workflow, skip the approval gate, or advance a `status:` fie
 |---|---|---|
 | `FOW.md` | human | canonical rules |
 | `AGENTS.md` | human | this router |
-| `docs/` | agent writes, human approves | every artifact: `prd.md`, `architecture.md`, `adr/`, `needs/`, `requirements.md`, `features/FS-xxx-slug/` |
+| `docs/` | agent writes, human approves | every artifact, **product repo only**: `prd.md`, `backlog.md`, `architecture.md`, `adr/`, `iterations/`, `needs/`, `requirements.md`, `features/FS-xxx-slug/` |
 | `.fow/skills/` | maintainer | canonical skill procedures — edit here |
-| `.fow/templates/` | maintainer | 12 artifact templates |
+| `.fow/templates/` | maintainer | 14 artifact templates |
 | `.fow/bin/` | maintainer | `sync-stubs.py` — regenerates the stubs below from the canonical skills |
 | `.claude/skills/` | generated | pointer stubs for Claude Code discovery. Do not edit — run `python .fow/bin/sync-stubs.py` |
 
 ## IDs and traceability
-`UN-` need, `REQ-` requirement, `FS-` feature, `PBI-` backlog item, `ADR-` decision, `SOUP-` third-party component assessment. Global sequence per type, never reused, never deleted — retire via `status: superseded`.
+`ITR-` iteration, `UN-` need, `REQ-` requirement, `FS-` feature, `PBI-` backlog item, `ADR-` decision, `SOUP-` third-party component assessment. Global sequence per type, never reused, never deleted — retire via `status: superseded`.
 `RMF-`, `RISK-`, `SBOM-`, `CCR-`, `TEST-` are external QMS ids. Reference them; never mint them.
 Chain points up: `REQ->UN`, `FS->REQ`, `PBI->FS`, test row->`REQ`, `SOUP->ADR` (else `ARCH`, else the introducing `PBI`). Declared in frontmatter `traces:`. Matrix derived by scan, never hand-kept.
+`iteration: ITR-xxx/In` on a UN or FS is scheduling, not tracing. It never enters `traces:`.
